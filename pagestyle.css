@@ -1,4 +1,129 @@
-.armor {
+/*index*/
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.34em;
+}
+
+.mainhead {
+    position: relative;
+    width: 75%;
+    left: 12%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.headbelter {
+    position: relative;
     border: 4px solid black;
-    border-radius: 5px 15px 10px 30px;
+    border-radius: 14px;
+    height: 84px;
+    margin-top: 30px;
+}
+
+.tpcore {
+    display: flex;
+    list-style: none;
+}
+
+.teleporter {
+    margin-top: 2%;
+    background-color: black;
+    border-radius: 2px;
+}
+
+.tpcore>a {
+    text-decoration: none;
+    margin: 0.3%;
+    margin-left: 1.02%;
+    color: aliceblue;
+    cursor: default;
+}
+
+.tpcore>a:hover {
+    color: gray;
+    cursor: default;
+}
+
+.armor {
+    background-color: azure;
+    position: relative;
+    width: 75%;
+    left: 12%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 4.2%;
+}
+
+.content {
+    overflow: hidden;
+    background-color: aliceblue;
+    float: left;
+}
+
+#Webgame {
+    height: 19.2vh;
+    width: 22.92vw;
+    margin: 0.5%;
+}
+
+#others {
+    height: 19.2vh;
+    width: 12.62vw;
+    margin: 0.5%;
+}
+
+#calendar {
+    height: 38.4vh;
+    width: 36.74vw;
+    margin: 0.5%;
+}
+
+#popular {
+    height: 59.6vh;
+    width: 34vw;
+    margin: 0.5%;
+    float: right;
+}
+
+/*schoolpage*/
+
+
+/*writingspace*/
+
+.citadel {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 4.2%;
+}
+
+#writingtitle {
+    position: relative;
+    left: 12%;
+    background-color: white;
+    border: 1px solid gray;
+    width: 75%;
+    height: 4.8%;
+    border-radius: 2px;
+    margin-bottom: 4%;
+    font-size: 1.6em;
+}
+
+#writingbody {
+    position: relative;
+    left: 12%;
+    background-color: white;
+    border: 1px solid gray;
+    width: 75%;
+    height: 540px;
+    border-radius: 2px;
+}
+
+.button {
+    border: 2px solid black;
+    display: inline-block;
+}
+
+.control {
+    float: left;
 }
