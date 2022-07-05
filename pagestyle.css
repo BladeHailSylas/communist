@@ -125,5 +125,13 @@ body {
 }
 
 .control {
-    float: left;
+    position: fixed;
+    z-index: 4;
+    bottom: 2%;
+    right: 2%;
+}
+
+.control>div {
+    float: right;
+    margin: 20px;
 }
