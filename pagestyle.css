@@ -135,3 +135,8 @@ body {
     float: right;
     margin: 20px;
 }
+
+.password {
+    border: 2px solid black;
+    border-radius: 2px;
+}
