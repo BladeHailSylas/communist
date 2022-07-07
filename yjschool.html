@@ -9,11 +9,30 @@
 </head>
 
 <body>
-    <header>
-        <div class="headbelter"></div>
-        </div>
-        <a href="writing.html" onclick="localStorage.setItem('token','true');">글쓰기</a>
-    </header>
+    <div class="pagewrapper">
+        <header>
+
+            <div class="headbelter">
+                <h2>양지고등학교</h2>
+            </div>
+            <div class="teleporter">
+                <div class="tpcore">
+                    <span class="normal">모두</span>
+                    <span class="hot">인기</span>
+                    <span class="info">공지</span>
+                    <div class="divider">
+                        <a class="writer" href="writing.html" onclick="localStorage.setItem('token','true');">글쓰기</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="docsassembled">
+                <ul class="docslist">
+                </ul>
+            </div>
+        </main>
+    </div>
 </body>
 
 </html>

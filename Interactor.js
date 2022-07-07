@@ -22,6 +22,19 @@ function explore() {
     return docinfo;
 }
 
+function titlefocus() {
+    if (new String(writtenid('writingtitle').innerHTML == '')) {
+        document.getElementById('writingtitle').innerHTML = '제목을 입력하세요';
+    }
+}
+
+function focusing(Location, Value) {
+    if (new String(document.getElementById(Location).innerHTML) == '') {
+        document.getElementById(Location).innerHTML = Value;
+    }
+}
+
+
 function nofirm() {
     var V = confirm('작성 중인 글을 삭제하고 이전 페이지로 돌아갑니까?');
     if (V == true) {
@@ -41,7 +54,7 @@ function yesfirm() {
 }
 
 function validAccess() {
-    /*var V = localStorage.getItem('token');*/
+    /*var V = localStorage.getItem('token'); 아직 토큰의 이용처는 1개*/
     if (localStorage.getItem('token') != 'true') {
         alert("유효하지 않은 접근입니다.");
         history.back();

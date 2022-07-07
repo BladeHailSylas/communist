@@ -1,6 +1,6 @@
 /*index*/
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Georgia', '맑은 고딕', 'Times New Roman', Times, serif;
     font-size: 1.34em;
 }
 
@@ -21,6 +21,7 @@ body {
 }
 
 .tpcore {
+    position: relative;
     display: flex;
     list-style: none;
 }
@@ -31,7 +32,7 @@ body {
     border-radius: 2px;
 }
 
-.tpcore>a {
+.tpcore>* {
     text-decoration: none;
     margin: 0.3%;
     margin-left: 1.02%;
@@ -39,7 +40,7 @@ body {
     cursor: default;
 }
 
-.tpcore>a:hover {
+.tpcore>*:hover {
     color: gray;
     cursor: default;
 }
@@ -87,6 +88,39 @@ body {
 
 /*schoolpage*/
 
+.pagewrapper {
+    width: 75%;
+    left: 12%;
+    position: relative;
+
+}
+
+.headbelter {
+    text-align: center;
+}
+
+.divider {
+    position: relative;
+    width: 9.5vh;
+    right: -76%;
+}
+
+.divider>* {
+    text-decoration: none;
+    margin: 0.3%;
+    margin-left: 1.02%;
+    color: aliceblue;
+    cursor: default;
+}
+
+.divider>*:hover {
+    color: gray;
+    cursor: default;
+}
+
+.docslist {
+    list-style-type: none;
+}
 
 /*writingspace*/
 
@@ -103,7 +137,7 @@ body {
     background-color: white;
     border: 1px solid gray;
     width: 75%;
-    height: 4.8%;
+    height: 5.7vh;
     border-radius: 2px;
     margin-bottom: 4%;
     font-size: 1.6em;
@@ -115,11 +149,13 @@ body {
     background-color: white;
     border: 1px solid gray;
     width: 75%;
-    height: 540px;
+    height: 84vh;
     border-radius: 2px;
 }
 
 .button {
+    background-color: white;
+    z-index: 4;
     border: 2px solid black;
     display: inline-block;
 }
@@ -136,7 +172,10 @@ body {
     margin: 20px;
 }
 
-.password {
+#password {
+    position: relative;
     border: 2px solid black;
     border-radius: 2px;
+    max-width: 20%;
+    right: -67%;
 }

@@ -1,6 +1,4 @@
 <!--이전 링크에서 넘어오는 태그: <a href="writing.html" onclick="localStorage.setItem('token','true');">글쓰기</a>-->
-
-
 <!DOCTYPE html>
 <html>
 
@@ -11,38 +9,17 @@
     <script src="Interactor.js"></script>
     <!--<script src="https://ipinfo.io?callback=callback"></script>-->
     <!--IP 수집기, 제한있는듯-->
-    <script>
-        window.onload = function () {
-            validAccess();
-            /*var password = document.querySelectorAll('.password')
-
-            password.onkeydown = function () {
-                console.log("confirmed");
-                if (password.textContent.length > 6) {
-                    alert("비밀번호는 7자리 이상 입력할 수 없습니다.");
-                    password.textContent = password.textContent.slice(0, -1);
-                }
-            }아직 완성되지 않았음*/
-            document.getElementById('writingtitle').onfocus = function () {
-                if (document.getElementById('writingtitle').innerHTML == '제목을 입력하세요') {
-                    document.getElementById('writingtitle').innerHTML = '';
-                }
-            }
-            document.getElementById('writingtitle').focusout = function () {
-            }
-        }
-    </script>
+    <script src="eventlist.js"></script>
 </head>
 
 <body>
-    <div class="headbelter"></div>
     <div class="citadel">
-        <div contenteditable="true" id="writingtitle" tabindex="0"></div>
-        <div contenteditable="true" id="writingbody" tabindex="0"></div>
+        <div contenteditable="true" id="writingtitle" tabindex="0" onfocusout="focusing('writingtitle','제목을 입력하세요');">제목을 입력하세요</div>
+        <div contenteditable="true" id="password" tabindex="0">비밀번호</div>
+        <div contenteditable="true" id="writingbody" tabindex="0" onfocusout="focusing('writingbody','내용을 입력하세요');">내용을 입력하세요</div>
     </div>
     <div class="control">
         <div class="button" id="no" onclick="nofirm();">취소</div>
-        <div class="button" id="yes" onclick="yesfirm();">작성</div>
-        <div contenteditable="true" class="password" tabindex="0">비밀번호</div>
+        <div class="button" id="yes" onclick="yesfirm();" tabindex="0">작성</div>
     </div>
 </body>
