@@ -7,16 +7,18 @@
     <title>글쓰기</title>
     <link rel="stylesheet" href="pagestyle.css">
     <script src="Interactor.js"></script>
-    <!--<script src="https://ipinfo.io?callback=callback"></script>-->
-    <!--IP 수집기, 제한있는듯-->
     <script src="eventlist.js"></script>
+    
 </head>
 
 <body>
     <div class="citadel">
-        <div contenteditable="true" id="writingtitle" tabindex="0" onfocusout="focusing('writingtitle','제목을 입력하세요');">제목을 입력하세요</div>
-        <div contenteditable="true" id="password" tabindex="0">비밀번호</div>
-        <div contenteditable="true" id="writingbody" tabindex="0" onfocusout="focusing('writingbody','내용을 입력하세요');">내용을 입력하세요</div>
+        <div contenteditable="true" id="writingtitle" tabindex="0"
+        onfocusout="focusing('writingtitle','제목을 입력하세요');">제목을 입력하세요</div>
+        <div contenteditable="true" id="password" tabindex="0"
+        onfocusout="focusing('password','비밀번호');">비밀번호</div>
+        <div contenteditable="true" id="writingbody" tabindex="0"
+        onfocusout="focusing('writingbody','내용을 입력하세요');">내용을 입력하세요</div>
     </div>
     <div class="control">
         <div class="button" id="no" onclick="nofirm();">취소</div>

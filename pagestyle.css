@@ -1,6 +1,6 @@
 /*index*/
 body {
-    font-family: 'Georgia', '맑은 고딕', 'Times New Roman', Times, serif;
+    font-family: '맑은 고딕', 'Georgia', 'Times New Roman', Times, serif;
     font-size: 1.34em;
 }
 
@@ -75,7 +75,7 @@ body {
 
 #calendar {
     height: 38.4vh;
-    width: 36.74vw;
+    width: 36.28vw;
     margin: 0.5%;
 }
 
