@@ -1,12 +1,12 @@
 //글쓰기 이벤트
-window.onload = function () {
+window.onload = () => {
     validAccess(); //유효성 검사
     let password = document.getElementById('password');
     let title = document.getElementById('writingtitle');
     let body = document.getElementById('writingbody');
     //이 셋은 window.onload의 지역변수이지만 실질적 전역변수
 
-    password.onkeydown = function () { //비밀번호 칸에서 버튼누르면
+    password.onkeydown = () => { //비밀번호 칸에서 버튼누르면
         setTimeout(function () {
             if (password.innerHTML.length > 8) {
                 alert("비밀번호는 9자리 이상 입력할 수 없습니다.");
