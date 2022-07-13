@@ -1,9 +1,9 @@
 //글쓰기 이벤트
 window.onload = function () {
     validAccess(); //유효성 검사
-    var password = document.getElementById('password');
-    var title = document.getElementById('writingtitle');
-    var body = document.getElementById('writingbody');
+    let password = document.getElementById('password');
+    let title = document.getElementById('writingtitle');
+    let body = document.getElementById('writingbody');
     //이 셋은 window.onload의 지역변수이지만 실질적 전역변수
 
     password.onkeydown = function () { //비밀번호 칸에서 버튼누르면
@@ -17,17 +17,17 @@ window.onload = function () {
             }
         }, 2);
     }
-    title.onfocus = function () { //제목 칸에 포인터 가면
+    title.onfocus = () => { //제목 칸에 포인터 가면
         if (title.innerHTML == "제목을 입력하세요") {
             title.innerHTML = '';
         }
     }
-    body.onfocus = function () { //내용 칸에 포인터 가면
+    body.onfocus = () => { //내용 칸에 포인터 가면
         if (body.innerHTML == "내용을 입력하세요") {
             body.innerHTML = '';
         }
     }
-    password.onfocus = function () { //비밀번호 칸에
+    password.onfocus = () => { //비밀번호 칸에
         if (password.innerHTML == "비밀번호") {
             password.innerHTML = '';
         }
