@@ -5,4 +5,4 @@ var link = mysql.createConnection({
     password: 'jeong2958',
     database: 'docs'
 });
-module.exports = link;
+module.exports = mysql, link;

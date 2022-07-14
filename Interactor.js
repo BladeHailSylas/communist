@@ -6,16 +6,9 @@ nowDay = () => { //시간
 
 writtenId = (V) => document.getElementById(V).textContent;
 
-docs = (title, body, pass, day, ip) => //글의 정보를 object로 출력
-    {return {
-        title,
-        body,
-        pass,
-        day,
-        ip
-    };}
+docs = (title, body, pass, day) => [title, body, pass, day]
 
-explore = () => docs(writtenId('writingtitle'), writtenId('writingbody'), writtenId('password'), nowDay(), 'none');
+explore = () => docs(writtenId('writingtitle'), writtenId('writingbody'), writtenId('password'), nowDay()/*IP 추가예정*/);
 
 focusing = (Location, Value) => {
     if (new String(document.getElementById(Location).innerHTML) == '') {
@@ -43,8 +36,7 @@ yesfirm = () => { //작성완료
     }
     if (V == true) {
         alert("글이 업로드되었습니다.");
-        console.log(explore()); //글을 DB에 업로드
-        //location.replace(document.referrer);
+        link.connect = getConnection(err);
     }
 }
 
@@ -57,7 +49,7 @@ validAccess = () => { //접근 유효성 검사(validate)
     else { localStorage.setItem('token', 'false'); }
 }
 
-setPasscode = (N) => { //비밀번호 무작위 설정자
+setPasscode = N => { //비밀번호 무작위 설정자
     let P = '';
     for(var I = 1; I <= N; I+=1){
         P += new String(getRandomInt(0, 9)); //비밀번호는 string으로 처리
@@ -69,4 +61,21 @@ getRandomInt = (min, max) => { //란돔 값 설정자
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+}
+
+import { createConnection } from 'mariadb';
+var link = createConnection({
+    host: '127.0.0.1',
+    user: 'administ',
+    password: 'jeong2958',
+    database: 'docs'
+});
+
+getConnection = err => {
+    if(err) throw err;
+    console.log('Good to go');
+    link.query('INSERT INTO documents VALUES (?, ?, ?, ?)', explore(), function(err, result) {
+        if(err) throw err;
+        console.log('Inserted value' + explore());
+    });
 }
