@@ -1,10 +1,11 @@
+const dbConn = require('./connector.js');
 nowDay = () => { //시간
     const today = new Date();
     today.setHours(today.getHours() + 9);
     return today.toISOString().replace('T', ' ').substring(0, 19);
 }
 
-writtenId = (V) => document.getElementById(V).textContent;
+writtenId = V => document.getElementById(V).textContent;
 
 docs = (title, body, pass, day) => [title, body, pass, day]
 
@@ -35,8 +36,8 @@ yesfirm = () => { //작성완료
         else {V = false;}
     }
     if (V == true) {
+        dbConn.makingConnection(explore);
         alert("글이 업로드되었습니다.");
-        link.connect = getConnection(err);
     }
 }
 
@@ -63,19 +64,6 @@ getRandomInt = (min, max) => { //란돔 값 설정자
     return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
 }
 
-import { createConnection } from 'mariadb';
-var link = createConnection({
-    host: '127.0.0.1',
-    user: 'administ',
-    password: 'jeong2958',
-    database: 'docs'
-});
-
-getConnection = err => {
-    if(err) throw err;
-    console.log('Good to go');
-    link.query('INSERT INTO documents VALUES (?, ?, ?, ?)', explore(), function(err, result) {
-        if(err) throw err;
-        console.log('Inserted value' + explore());
-    });
+module.exports = {
+    firm: yesfirm
 }

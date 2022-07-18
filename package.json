@@ -1,9 +1,8 @@
 {
   "name": "communist",
   "version": "1.0.0",
-  "description": "",
+  "description": "Making community.",
   "main": "Interactor.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +18,8 @@
   },
   "homepage": "https://github.com/BladeHailSylas/communist#readme",
   "dependencies": {
-    "mariadb": "^3.0.0"
+    "mariadb": "^3.0.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   }
 }
