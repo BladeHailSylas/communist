@@ -1,5 +1,9 @@
 const conn = require('./connector.js');
-const interaction = require('./Interactor.js');
+//const interaction = require('./Interactor.js');
+
+valueImporter = () => {
+    conn.insertValue(interaction.docs);
+}
 
 /*const readline = require('readline');
 const { parse } = require('path');

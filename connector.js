@@ -8,7 +8,7 @@ const pool = mariadb.createPool({
     connectionLimit: val.connectionLimit
 });
 
-async function InsertValue(value) {
+async function insertValue(value) {
     let conn;
     try {
         conn = await pool.getConnection();
@@ -25,5 +25,5 @@ async function InsertValue(value) {
 }
 
 module.exports = {
-    insertValue: InsertValue
+    insertValue: insertValue
 }

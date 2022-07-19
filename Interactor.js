@@ -1,4 +1,4 @@
-const dbConn = require('./connector.js');
+const connector = require("./connector");
 nowDay = () => { //시간
     const today = new Date();
     today.setHours(today.getHours() + 9);
@@ -36,7 +36,9 @@ yesfirm = () => { //작성완료
         else {V = false;}
     }
     if (V == true) {
-        dbConn.makingConnection(explore);
+        require(["./connector"], () => {
+            connector.insertValue(docs());
+        });
         alert("글이 업로드되었습니다.");
     }
 }
@@ -62,8 +64,4 @@ getRandomInt = (min, max) => { //란돔 값 설정자
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
-}
-
-module.exports = {
-    firm: yesfirm
 }
